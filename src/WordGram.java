@@ -69,8 +69,13 @@ public class WordGram {
 
 		WordGram wg = (WordGram) o;
 
-		if (wg.myWords.equals(this.myWords)) {
-			return false;
+		int counter = 0;
+		for (String word : wg.myWords) {
+			//System.out.println(word + wg.myWords[counter]);
+			if (!word.equals(myWords[counter]) || wg.length() != myWords.length) {
+				return false;
+			}
+			counter += 1;
 		}
 
 		// TODO: Complete this method
@@ -125,4 +130,6 @@ public class WordGram {
 		myToString = String.join(" ", myWords);
 		return myToString;
 	}
+
+
 }
