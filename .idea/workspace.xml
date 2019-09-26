@@ -2,20 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eb68d1cd-4e12-496e-a61d-6796dc490324" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Markov-WordGram-Fall19.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Markov-WordGram-Fall19.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Markov-WordGram-Fall19/BaseMarkov.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Markov-WordGram-Fall19/BaseWordMarkov.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Markov-WordGram-Fall19/META-INF/Markov-WordGram-Fall19.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Markov-WordGram-Fall19/MarkovDriver.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Markov-WordGram-Fall19/MarkovWordDriver.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Markov-WordGram-Fall19/SimpleWordGramDriver.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Markov-WordGram-Fall19/SimpleWordGramDriver.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Markov-WordGram-Fall19/TextSource.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Markov-WordGram-Fall19/WordGram.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Markov-WordGram-Fall19/WordGram.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Markov-WordGram-Fall19/WordGramBenchmark.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Markov-WordGram-Fall19/WordGramBenchmark.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Markov-WordGram-Fall19/WordGramTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Markov-WordGram-Fall19/WordGramTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/WordGram.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WordGram.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -62,7 +50,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.WordGramBenchmark">
+  <component name="RunManager" selected="JUnit.WordGramTest">
     <configuration name="SimpleWordGramDriver" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="SimpleWordGramDriver" />
       <module name="Markov-WordGram-Fall19" />
@@ -86,11 +74,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="WordGramTest.testEqualsFalse" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Markov-WordGram-Fall19" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="WordGramTest" />
+      <option name="METHOD_NAME" value="testEqualsFalse" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.WordGramBenchmark" />
-        <item itemvalue="Application.SimpleWordGramDriver" />
         <item itemvalue="JUnit.WordGramTest" />
+        <item itemvalue="JUnit.WordGramTest.testEqualsFalse" />
+        <item itemvalue="Application.SimpleWordGramDriver" />
+        <item itemvalue="Application.WordGramBenchmark" />
       </list>
     </recent_temporary>
   </component>
@@ -106,11 +105,6 @@
       <updated>1569267115806</updated>
     </task>
     <servers />
-  </component>
-  <component name="TestHistory">
-    <history-entry file="WordGramTest - 2019.09.23 at 15h 36m 39s.xml">
-      <configuration name="WordGramTest" configurationId="JUnit" />
-    </history-entry>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">

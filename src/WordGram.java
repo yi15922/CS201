@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 
 /**
  * A WordGram represents a sequence of strings
@@ -24,7 +25,11 @@ public class WordGram {
 		myToString = null;
 		myHash = 0;
 
-		// TODO: initialize all instance variable
+		int counter = 0;
+		for (int i = start; i < start + size; i++) {
+			myWords[counter] = source[i];
+			counter += 1;
+		}
 	}
 
 	/**
@@ -40,52 +45,84 @@ public class WordGram {
 	}
 
 	/**
-	 * Complete this comment
-	 * @return
+	 * Returns the number of words stored in myWords.
+	 * @return int of length
 	 */
 	public int length(){
-		// TODO: change this
-		return 0;
+
+		return myWords.length;
 	}
 
 
 	/**
-	 * Complete appropriate comment here
-	 * @param o
-	 * @return
+	 * A boolean that returns false when the object passed
+	 * is not a WordGram object or if the object's myWords array
+	 * is different from the myWords array of this object.
+	 * @param o an Object of type WordGram
+	 * @return boolean value
 	 */
 	@Override
 	public boolean equals(Object o) {
 		if (! (o instanceof WordGram) || o == null){
 			return false;
 		}
+
+		WordGram wg = (WordGram) o;
+
+		if (wg.myWords.equals(this.myWords)) {
+			return false;
+		}
+
 		// TODO: Complete this method
 
 		return true;
 	}
 
+	/**
+	 * Overrides the hashCode() method and returns the
+	 * hash code of the string returned by toString(), stored
+	 * in myHash.
+	 * @return The hashcode that has been stored to myHash.
+	 */
 	@Override
 	public int hashCode(){
-		// TODO: complete this method
+		myHash = this.toString().hashCode();
+
 		return myHash;
 	}
 	
 
 	/**
-	 * Create and complete this comment
+	 * Creates a new WordGram that removes the first word of this
+	 * WordGram and appends string last at the end.
 	 * @param last is last String of returned WordGram
-	 * @return
+	 * @return the new WordGram.
 	 */
 	public WordGram shiftAdd(String last) {
 		WordGram wg = new WordGram(myWords,0,myWords.length);
-		// TODO: Complete this method
 
+
+		int counter = 0;
+
+		for (int i = 1; i < myWords.length; i++) {
+			wg.myWords[counter] = myWords[i];
+			counter += 1;
+		}
+
+		wg.myWords[wg.length()-1] = last;
 		return wg;
 	}
 
+
+	/**
+	 * Overrides the toString method and returns a string representing
+	 * all strings stored in WordGram, stored in myToString.
+	 * @return A string representing all strings in WordGram, stored in
+	 * myToString.
+	 */
 	@Override
 	public String toString(){
-		// TODO: Complete this method
+		myToString = String.join(" ", myWords);
 		return myToString;
 	}
 }
