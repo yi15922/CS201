@@ -3,10 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="eb68d1cd-4e12-496e-a61d-6796dc490324" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/analysis/analysis.txt" beforeDir="false" afterPath="$PROJECT_DIR$/analysis/analysis.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Markov-WordGram-Fall19/SimpleWordGramDriver.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Markov-WordGram-Fall19/SimpleWordGramDriver.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Markov-WordGram-Fall19/WordGram.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Markov-WordGram-Fall19/WordGram.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SimpleWordGramDriver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SimpleWordGramDriver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/WordGram.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WordGram.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/WordGramBenchmark.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WordGramBenchmark.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -52,7 +52,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.WordGramTest">
+  <component name="RunManager" selected="Application.WordGramBenchmark">
     <configuration name="SimpleWordGramDriver" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="SimpleWordGramDriver" />
       <module name="Markov-WordGram-Fall19" />
@@ -88,10 +88,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.WordGramBenchmark" />
         <item itemvalue="JUnit.WordGramTest" />
         <item itemvalue="Application.SimpleWordGramDriver" />
         <item itemvalue="JUnit.WordGramTest.testEqualsFalse" />
-        <item itemvalue="Application.WordGramBenchmark" />
       </list>
     </recent_temporary>
   </component>
@@ -113,7 +113,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>

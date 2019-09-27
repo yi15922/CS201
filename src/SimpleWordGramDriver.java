@@ -1,10 +1,13 @@
 public class SimpleWordGramDriver {
     public static void main(String[] args) {
+
+        int WSIZE = 5;
+
         String[] words = {"Computer", "Science", "is", "fun"};
-        WordGram g = new WordGram(words,0,3);
+        WordGram g = new WordGram(words,0,WSIZE - 1);
 
         String[] moreWords = {"Computer", "Science", "is", "*****"};
-        WordGram f = new WordGram(words,0,3);
+        WordGram f = new WordGram(words,0,WSIZE - 1);
 
         System.out.println(g);
         System.out.println(f);

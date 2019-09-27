@@ -1,5 +1,6 @@
 
-YOUR NAME and YOUR NETID
+Yi Chen
+yc311
 
 Run WordGramBenchmark for wordgrams of size 2-10 and record
 the number of WordGram values/objects that occur more than
@@ -16,13 +17,13 @@ values of WSIZE
 WSIZE    # duplicates
 2        60,453
 3        10,756
-4
-5
-6
-7
-8
-9
-10
+4        1,987
+5        667
+6        362
+7        226
+8        151
+9        105
+10       73
 
 =====
 Explain in your own words the conceptual differences between
@@ -32,10 +33,59 @@ Answer these questions:
 (1) Why the results of these methods should be the same in
 terms of changes made to the HashSet parameter passed to each method.
 
+In each case, every new WordGram created are added to the HashSet
+passed to the methods. We know that for a word array of any length,
+totalWords - WSIZE + 1 WordGrams can be created. In benchmark, a new
+WordGram is added to the HashSet every iteration, where the loop condition takes
+words.length - WSIZE + 1. In benchmarkShift, a single initial WordGram is added to
+the HashSet, then a while loop is used to move the scanner from its current
+position (having already scanned WSIZE words) until files run out, writing
+shifted WordGrams to the HashSet totalWords - WSIZE times. The +1 is
+accounted for by the adding of the initial WordGram. This means that
+the same number of WordGrams are added to the HashSets passed to each
+of the two methods.
+
 (2) What are the conceptual differences between the two
 benchmarking methods
+
+The benchmark method creates an ArrayList of strings, adds each word from each
+filename to the list, then creates a new Array of strings. The method then loops
+over the word list and creates a new WordGram of WSIZE for every element, adding
+each new WordGram to the HashSet that was passed to the method. The method returns
+the total number of WordGrams created.
+
+The benchmarkShift method creates a string array words of size WSIZE, then fills the
+array with the first WSIZE words. Then it creates a WordGram object of size WSIZE
+with all elements of words. It uses a while loop to call shiftAdd() for each scanner word
+on the existing WordGram, shifting the WordGram and appending each new word returned by the scanner.
+The loop also adds each shifted WordGram to the set that was passed to the method. The
+method returns the total number of WordGrams created.
+
+The main differences are that benchmark creates an ArrayList and adds all words, while
+benchmarkShift creates a String array and populates with very few (WSIZE) words. This
+means that benchmark will have to loop through considerably more strings to populate
+its ArrayList, which also slows down performance when it resizes. Another difference
+is that benchmarkShift calls the shiftAdd() method to modify existing WordGrams
+rather than create new ones, even though the shiftAdd() method itself does
+create a new WordGram object.
+
 
 (3) Is the total amount of memory allocated for arrays
 the same or different in the two methods? Account for
 arrays created in the methods and arrays created by
 WordGram objects. Try to be quantitative in answering.
+
+Each WordGram itself creates a string Array of size WSIZE, and
+both methods create the same number of new WordGrams, so memory
+allocated for arrays created by WordGram objects should not differ.
+However, the benchmark method is more space inefficient
+because it creates 2 arrays: a large ArrayList of all possible words,
+and a copy of that ArrayList into a string Array rather unnecessarily.
+This requires the allocation of a lot of space and generates garbage
+especially when the ArrayList needs to grow during iteration.
+In contrast, benchmarkShift creates only one small immutable array of
+size WSIZE, which takes up very little memory.
+
+We can show that benchmarkShift is more efficient by running the two
+methods and noting that benchmark consistently takes longer than
+benchmarkShift to run.
